@@ -1,0 +1,224 @@
+* {
+   border: 0;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: 62.5%;
+
+   --ff-primary: 'Staatliches', sans-serif;
+   --ff-secondary: "Poppins", sans-serif;
+}
+
+body::before {
+   content: "";
+   background: #535971;
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   height: 43.6rem;
+   width: 100%;
+   z-index: -1;
+}
+
+body {
+   font-size: 1.6rem;
+   font-family: var(--ff-secondary);
+
+   max-width: 75.0rem;
+   margin: auto;
+   background: #EFEFEF;
+   padding: 0 1.5rem;
+}
+
+header {
+   color: #FFFFFF;
+
+   margin-top: 14.0rem;
+   display: grid;
+   gap: 1.8rem;
+   max-width: 41.7rem;
+}
+
+header h1 {
+   font-family: var(--ff-primary);
+   font-style: normal;
+   font-weight: 400;
+   font-size: 4.8rem;
+   line-height: 6.0rem;
+}
+
+header p {
+   font-size: 2.0rem;
+   line-height: 3.0rem;
+}
+
+main {
+   background: #FFFFFF;
+   border-radius: 2.0rem 2.0rem 0 0;
+
+   margin-top: 5.8rem;
+   padding: 6.4rem;
+   width: 100%;
+}
+
+.wrapper-fieldset {
+   display: grid;
+   gap: 3.0rem;
+}
+
+fieldset {
+   display: grid;
+   gap: 1.6rem;
+}
+
+fieldset legend {
+   font-family: var(--ff-primary);
+   font-size: 2.4rem;
+   line-height: 3.4rem;
+   color: #535971;
+   text-transform: uppercase;
+
+   padding-bottom: 1.6rem;
+   margin-bottom: 3.6rem;
+   border-bottom: 1px solid #E6E6F0;
+   width: 100%;
+}
+
+.wrapper-input-inline {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 2.2rem;
+}
+
+.wrapper-input {
+   display: grid;
+   gap: 0.8rem;
+}
+
+.wrapper-input label {
+   font-size: 1.4rem;
+   line-height: 2.4rem;
+   color: #4E4958;
+}
+
+.wrapper-input label span {
+   margin-left: 0.8rem;
+   font-size: 1.2rem;
+   line-height: 2.0rem;
+   color: #C1BCCC;
+}
+
+.wrapper-input label span:hover {
+   color: #4E4958;
+}
+
+.wrapper-input input {
+   background: #FAFAFC;
+   font-size: 1.8rem;
+
+   border: 1px solid #E6E6F0;
+   border-radius: 0.8rem;
+   height: 5.6rem;
+   padding: 0 1.5rem;
+   width: 100%;
+}
+
+fieldset fieldset {
+   display: grid;
+   gap: 0.8rem;
+}
+
+fieldset fieldset legend {
+   font-family: var(--ff-primary);
+   font-size: 2.0rem;
+   line-height: 3.4rem;
+   color: #535971;
+   text-transform: uppercase;
+
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+
+.wrapper-date {
+   display: flex;
+   gap: 3.2rem;
+}
+
+.wrapper-date>.wrapper-input {
+   width: 50%;
+}
+
+.time {
+   display: flex;
+   flex: 1;
+   gap: 1.0rem;
+}
+
+.time .wrapper-input {
+   flex: 1;
+}
+
+#button {
+   background: #535971;
+   border-radius: 0 0 2.0rem 2.0rem;
+   padding: 5.0rem 7.1rem;
+   margin-bottom: 14.0rem;
+}
+
+button {
+   font-family: var(--ff-primary);
+   font-size: 2.0rem;
+   line-height: 2.6rem;
+   color: #FFFFFF;
+   background: #FF5374;
+   cursor: pointer;
+
+   border-radius: 2.0rem;
+   width: 100%;
+   height: 5.5rem;
+}
+
+button:hover {
+   background: #f7335a;
+}
+
+@media (max-width:768px) {
+   :root {
+      font-size: 50%;
+   }
+
+   .wrapper-input-inline {
+      grid-template-columns: auto;
+      gap: 0.8rem;
+   }
+}
+
+@media (max-width:610px) {
+   header {
+      max-width: 100%;
+      text-align: center;
+   }
+
+   .wrapper-date>.wrapper-input {
+      width: 40%;
+   }
+}
+
+@media (max-width:512px) {
+   main {
+      padding: 3.2rem;
+   }
+
+   .wrapper-date {
+      flex-direction: column;
+   }
+
+   .wrapper-date>.wrapper-input {
+      width: 100%;
+   }
+}
